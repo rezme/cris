@@ -3,19 +3,19 @@
   <head>
     <title>Tumtumtum</title>
 
-   <meta http-equiv="Content-type" content="text/html;
+<meta http-equiv="Content-type" content="text/html;
 charset=utf-8">
-<meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+<meta name="viewport" id="viewport" content="width=device-width, height=device-height,
+initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8">
+
 document.addEventListener("deviceready",onDeviceReady,false);
+
 function onDeviceReady() {
   navigator.notification.alert("Acceso",alertDismissed,"Yeah","fin");
 }
-funtion alertDismissed(){
-}
 function capturePhoto() {
-      // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
       destinationType: Camera.DestinationType.DATA_URL });
     }
@@ -48,6 +48,8 @@ function playAudio(source) {
 function hola(){
   navigator.notification.alert("wawaw");
 }
+funtion alertDismissed(){
+}
     </script>
   </head>
   <style>
@@ -64,6 +66,6 @@ function hola(){
   </style>
   <body>
     <button class="botonCamara" onclick="capturePhoto();">Capture Photo</button> <br>
-    <button class="botonAudio" onclick="hola();">Play audio</button>
+    <!--<button class="botonAudio" onclick="hola();">Play audio</button> -->
   </body>
 </html>

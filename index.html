@@ -10,7 +10,9 @@ initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
 <script type="text/javascript" charset="utf-8">
 funtion alertDismissed(){
 }
+function onLoad(){
 document.addEventListener("deviceready",onDeviceReady,false);
+}
 function onDeviceReady() {
   navigator.notification.alert("Acceso",alertDismissed,"Yeah","fin");
 }
@@ -45,7 +47,7 @@ function hola(){
       height:60px;
     }
   </style>
-  <body>
+  <body onload="onload();">
     <button class="botonCamara" onclick="capturePhoto();">Capture Photo</button> <br>
     <!--<button class="botonAudio" onclick="hola();">Play audio</button> -->
   </body>

@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+ <style>
+    .botonCamara{
+      display: block;
+      width:100px;
+      height:60px;
+    }
+     .botonAudio{
+      display: block;
+      width:100px;
+      height:60px;
+    }
+  </style>
   <head>
     <title>Tumtumtum</title>
 <meta http-equiv="Content-type" content="text/html;charset=utf-8">
@@ -16,8 +28,9 @@ function onDeviceReady() {
   navigator.notification.alert("Acceso",alertDismissed,"Yeah","fin");
 }
 function capturePhoto() {
-      navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-      destinationType: Camera.DestinationType.DATA_URL });
+  
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL });
       
     function onSuccess(imageData) {
     var image = document.getElementById('myImage');
@@ -34,18 +47,6 @@ function hola(){
 }
     </script>
   </head>
-  <style>
-    .botonCamara{
-      display: block;
-      width:100px;
-      height:60px;
-    }
-     .botonAudio{
-      display: block;
-      width:100px;
-      height:60px;
-    }
-  </style>
   <body onload="onload();">
     <button class="botonCamara" onclick="capturePhoto();">Capture Photo</button>
     <!--<button class="botonAudio" onclick="hola();">Play audio</button> -->

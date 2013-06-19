@@ -6,21 +6,15 @@
    <meta http-equiv="Content-type" content="text/html;
 charset=utf-8">
 <meta name="viewport" id="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8">
-function onBodyLoad() {
 document.addEventListener("deviceready",onDeviceReady,false);
-}
-
 function onDeviceReady() {
   navigator.notification.alert("Acceso",alertDismissed,"Yeah","fin");
-  
 }
 funtion alertDismissed(){
 }
-}
- function capturePhoto() {
+function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
       destinationType: Camera.DestinationType.DATA_URL });
@@ -59,12 +53,12 @@ function hola(){
   <style>
     .botonCamara{
       display: block;
-      width:60px;
+      width:100px;
       height:60px;
     }
      .botonAudio{
       display: block;
-      width:60px;
+      width:100px;
       height:60px;
     }
   </style>

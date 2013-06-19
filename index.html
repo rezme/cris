@@ -17,7 +17,9 @@ function onDeviceReady() {
   navigator.notification.alert("Acceso",alertDismissed,"Yeah","fin");
   
 }
-
+funtion alertDismissed(){
+}
+}
  function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
@@ -49,11 +51,25 @@ function playAudio(source) {
     // Play audio
     my_media.play();
 }
-
-
+function hola(){
+  navigator.notification.alert("wawaw");
+}
     </script>
   </head>
+  <style>
+    .botonCamara{
+      display:none;
+      width:60px;
+      height:60px;
+    }
+     .botonAudio{
+      display:none;
+      width:60px;
+      height:60px;
+    }
+  </style>
   <body>
-    <button onclick="capturePhoto();">Capture Photo</button> <br>
+    <button class="botonCamara" onclick="capturePhoto();">Capture Photo</button> <br>
+    <button class="botonAudio" onclick="hola();")>Play audio</button>
   </body>
 </html>
